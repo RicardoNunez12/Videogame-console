@@ -1,7 +1,7 @@
 let iconos = [];
 let selecciones = [];
 let attempts = 0;
-let aciertos = 0; // Global variable to store the number of correct matches
+let aciertos = 0;
 
 generarTablero();
 
