@@ -4,7 +4,7 @@ const imgAtaqueJugador = document.getElementById('img-ataque-jugador');
 const imgAtaquePc = document.getElementById('img-ataque-pc');
 const btnPiedra = document.getElementById('btn-piedra');
 const btnPapel = document.getElementById('btn-papel');
-const btnTijeras = document.getElementById('btn-tijeras');
+
 
 let opcionJugador;
 let opcionPc;
@@ -49,6 +49,8 @@ btnTijeras.addEventListener('click', function(){
 })
 
 
+
+
 function opPc(){
     var aleaorio = nAleatorio();
 
@@ -88,6 +90,7 @@ function nAleatorio(){
 }
 
 
+
 function addImagenes(){
     for(let i=0;i<imagenes.length;i++){
         if(opcionJugador == imagenes[i].name){
@@ -109,5 +112,11 @@ function addImagenes(){
     
 };
 
+function mostrarIntroducciones() {
+    const mensaje = "                         ¡Bienvenido a Piedra | Papel | Tijeras!\n\nEl juego de piedra, papel o tijera tiene sus raíces en diferentes culturas y épocas, con referencias antiguas en China y Japón. La versión moderna se desarrolló en Japón a fines del siglo XIX y se popularizó después de la Segunda Guerra Mundial cuando los soldados estadounidenses lo llevaron a Estados Unidos.\n\nEn este juego, tú y la computadora elegirán un ataque: piedra, papel o tijeras. Las reglas son simples: la piedra vence a las tijeras, las tijeras vencen al papel y el papel vence a la piedra. Si ambos jugadores eligen el mismo ataque, el resultado es un empate.\n\nPara jugar, selecciona uno de los ataques haciendo clic en su respectiva imagen. El resultado de la batalla se mostrará en la parte superior.\n\n                                      ¡Diviértete jugando!";
+    
+   
+alert(mensaje);
+}
 
 window.addEventListener('load', iniciar);
