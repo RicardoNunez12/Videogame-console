@@ -83,3 +83,8 @@ function deseleccionar(selecciones) {
         }
     }, 1000);
 }
+
+function mostrarIntroducciones() {
+    const mensaje = "                                    ¡Bienvenido a Memorama!\n\nEl juego de Memorama, también conocido como Juego de la Memoria, tiene sus raíces en las tarjetas de enseñanza de China en la dinastía Song. La versión moderna con cartas ilustradas se popularizó en el siglo XIX en Europa. Con la era digital, se adaptó a videojuegos y aplicaciones. Es un juego de parejas donde los jugadores deben recordar la ubicación de las cartas para encontrar las coincidencias. Además de ser un entretenimiento, el Memorama ha sido utilizado para mejorar la memoria y habilidades cognitivas. Es un juego popular y beneficioso para todas las edades.\n\nEl objetivo del juego es encontrar todas las parejas de cartas iguales. Haz clic en las cartas para voltearlas y trata de recordar dónde se encuentran las cartas que coinciden..\n\n                                           ¡Buena suerte!";
+    alert(mensaje);
+}
