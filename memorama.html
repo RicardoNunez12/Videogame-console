@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Memorama</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         :root {
@@ -17,17 +16,18 @@
         }
 
         body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-abstract-minimal-orange-background-simple-background-with-halftone-image_519864.jpg");
             padding: 0;
             margin: 0;
-            -webkit-perspective: 1000;
-            background: powderblue;
+            perspective: 1000;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-family: calibri;
+            
         }
 
         div {
@@ -60,7 +60,7 @@
         }
 
         .trasera {
-            background-color: lightcyan;
+            background-color: rgb(255, 223, 15);
             transform: rotateY(180deg);
         }
 
@@ -69,12 +69,13 @@
         }
 
         .nuevo-juego {
-            cursor: pointer;
-            background: linear-gradient(orange, darkorange);
-            padding: 20px;
-            border-radius: 50px;
-            border: white 5px solid;
-            font-size: 130%;
+        cursor: pointer;
+        background: linear-gradient(orange, darkorange);
+        padding: 20px;
+        border-radius: 50px;
+        border: white 5px solid;
+        font-size: 130%;
+        color: white;
         }
 
         @keyframes iniciar {
@@ -89,6 +90,55 @@
                 transform: rotateY(0deg);
             }
         }
+
+        .header {
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        #attempts,
+        #matches {
+        cursor: pointer;
+        background: linear-gradient(orange, darkorange);
+        padding: 20px;
+        border-radius: 50px;
+        border: white 5px solid;
+        font-size: 130%;
+        color: white;
+        }
+
+        #regresar-al-menu {
+        font-family: Arial, sans-serif;  
+        position: fixed;
+        bottom: 20px;
+        right: 17px;
+        border: none;
+        background-color: darkorange;
+        cursor: pointer;
+        
+        }
+
+        button a {
+        color: #fff;
+        text-decoration: none;
+        }
+
+        button {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        padding: 12px 24px; 
+        border: none;
+        background-color: darkorange;
+        color: #ffffff;
+        border: white 4px solid;
+        }
+
+        #introducciones {
+        text-align: center;
+        margin-left: 1269px;
+        margin-top: -20px;
+        }
+
     </style>
 </head>
 
@@ -96,15 +146,27 @@
     <div id="tablero">
     </div>
     <br>
-    <div class="nuevo-juego" onclick="generarTablero()">
-        Nuevo Juego
+
+    <div class="header">
+        <div id="attempts" class="attempts">
+            INTENTOS: 0
+        </div>
+        <div class="nuevo-juego" onclick="generarTablero()">
+            NUEVO JUEGO
+        </div>
+        <div id="matches" class="matches">
+            PARTIDAS: 0
+        </div>
     </div>
-    <div id="attempts">
-        Attempts: 0
+
+    <div id="introducciones">
+        <button type="button" onclick="mostrarIntroducciones()">INSTRUCTIVO</button>
     </div>
-    <div id="matches">
-        Matches: 0
+
+    <div id="regresar-al-menu">
+        <button type="button" onclick=""><a href="/index.html">REGRESAR AL MENÚ</a></button>
     </div>
+
     <script src="memorama.js">
     </script>
 
