@@ -1,9 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url("https://www.gratistodo.com/wp-content/uploads/2021/12/Fondos-Azules-5-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
 }
+
 
 h1 {
     text-align: center;
@@ -54,7 +58,8 @@ h1 {
 }
 
 .celda.winner {
-    background-color: #8dbddf;
+    background-color: #007bff;
+    
 }
 
 #turno {
@@ -90,4 +95,40 @@ h1 {
     font-weight: 600;
     text-shadow: 2px 4px #3c93d0;
     color:#0011ff
+}
+
+#regresar-al-menu {
+    font-family: Arial, sans-serif;  
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background-color: #007bff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 12px 24px; 
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#introducciones {
+    text-align: center;
+    margin-left: 1269px;
+    margin-top: -30px;
 }
